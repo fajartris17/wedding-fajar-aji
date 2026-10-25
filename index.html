@@ -854,14 +854,14 @@
         <p class="section-subtitle">Mohon konfirmasi kehadiran Anda</p>
 
         <div class="form-container">
-            <form id="rsvpForm">
+            <form id="rsvpForm" action="https://formspree.io/f/YOUR_RSVP_FORM_ID" method="POST">
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" id="rsvpName" required placeholder="Nama Anda">
+                    <input type="text" name="nama" id="rsvpName" required placeholder="Nama Anda">
                 </div>
                 <div class="form-group">
                     <label>Jumlah Tamu</label>
-                    <select id="rsvpCount">
+                    <select name="jumlah" id="rsvpCount">
                         <option value="1">1 Orang</option>
                         <option value="2">2 Orang</option>
                         <option value="3">3 Orang</option>
@@ -871,25 +871,23 @@
                 </div>
                 <div class="form-group">
                     <label>Kehadiran</label>
-                    <select id="rsvpStatus">
+                    <select name="kehadiran" id="rsvpStatus">
                         <option value="hadir">Hadir</option>
                         <option value="tidak">Tidak Dapat Hadir</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label>Ucapan / Doa (opsional)</label>
-                    <textarea id="rsvpMessage" rows="3" placeholder="Tulis ucapan atau doa untuk kami..."></textarea>
+                    <textarea name="ucapan" id="rsvpMessage" rows="3" placeholder="Tulis ucapan atau doa untuk kami..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Kirim Konfirmasi</button>
             </form>
             <p id="rsvpSuccess" style="display:none; text-align:center; margin-top:1rem; color:var(--gold-dark); font-weight:500;">
                 Terima kasih! Konfirmasi Anda telah tercatat.
             </p>
-            <div style="text-align:center; margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid #eee;">
-                <p style="font-size:0.9rem; margin-bottom:0.8rem;">Atau isi via Google Form (data terkumpul otomatis):</p>
-                <a href="https://forms.google.com/" target="_blank" class="map-btn" style="display:inline-block;">Buka Google Form RSVP</a>
-                <p style="font-size:0.75rem; color:var(--soft-gray); margin-top:0.5rem;">* Ganti link di atas dengan Google Form yang kamu buat sendiri</p>
-            </div>
+            <p style="font-size:0.75rem; color:var(--soft-gray); margin-top:1rem; text-align:center;">
+                * Ganti <strong>YOUR_RSVP_FORM_ID</strong> dengan ID Formspree kamu.
+            </p>
         </div>
     </section>
 
@@ -897,10 +895,10 @@
     <section id="guestbook">
         <h2 class="section-title">Buku Tamu & Ucapan</h2>
         <div class="divider"></div>
-        <p class="section-subtitle">Tinggalkan doa dan ucapan terbaik untuk kami<br><small style="color:var(--soft-gray);">Ucapan akan terlihat oleh semua tamu</small></p>
+        <p class="section-subtitle">Tinggalkan doa dan ucapan terbaik untuk kami<br><small style="color:var(--soft-gray);">Ucapan masuk otomatis ke dashboard kamu</small></p>
 
         <div class="form-container">
-            <form id="guestbookForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <form id="guestbookForm" action="https://formspree.io/f/YOUR_GUESTBOOK_FORM_ID" method="POST">
                 <div class="form-group">
                     <label>Nama</label>
                     <input type="text" name="nama" id="gbName" required placeholder="Nama Anda">
@@ -912,13 +910,13 @@
                 <button type="submit" class="submit-btn">Kirim Ucapan</button>
             </form>
             <p style="font-size:0.75rem; color:var(--soft-gray); margin-top:1rem; text-align:center;">
-                * Ganti <strong>YOUR_FORM_ID</strong> di form action dengan ID Formspree kamu.<br>
-                Daftar gratis di <a href="https://formspree.io" target="_blank">formspree.io</a> → buat form baru → copy endpoint.
+                * Ganti <strong>YOUR_GUESTBOOK_FORM_ID</strong> dengan ID Formspree kamu.<br>
+                Daftar gratis di <a href="https://formspree.io" target="_blank">formspree.io</a>
             </p>
         </div>
 
         <div class="guestbook-list" id="guestbookList">
-            <p style="text-align:center; color:var(--soft-gray); font-size:0.9rem;">Ucapan dari tamu akan muncul di sini setelah dihubungkan ke Formspree.</p>
+            <p style="text-align:center; color:var(--soft-gray); font-size:0.9rem;">Ucapan tamu akan terkumpul otomatis di Formspree.</p>
         </div>
     </section>
 
