@@ -897,24 +897,28 @@
     <section id="guestbook">
         <h2 class="section-title">Buku Tamu & Ucapan</h2>
         <div class="divider"></div>
-        <p class="section-subtitle">Tinggalkan doa dan ucapan terbaik untuk kami</p>
+        <p class="section-subtitle">Tinggalkan doa dan ucapan terbaik untuk kami<br><small style="color:var(--soft-gray);">Ucapan akan terlihat oleh semua tamu</small></p>
 
         <div class="form-container">
-            <form id="guestbookForm">
+            <form id="guestbookForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
                 <div class="form-group">
                     <label>Nama</label>
-                    <input type="text" id="gbName" required placeholder="Nama Anda">
+                    <input type="text" name="nama" id="gbName" required placeholder="Nama Anda">
                 </div>
                 <div class="form-group">
                     <label>Ucapan</label>
-                    <textarea id="gbMessage" rows="3" required placeholder="Tulis ucapan atau doa..."></textarea>
+                    <textarea name="ucapan" id="gbMessage" rows="3" required placeholder="Tulis ucapan atau doa..."></textarea>
                 </div>
                 <button type="submit" class="submit-btn">Kirim Ucapan</button>
             </form>
+            <p style="font-size:0.75rem; color:var(--soft-gray); margin-top:1rem; text-align:center;">
+                * Ganti <strong>YOUR_FORM_ID</strong> di form action dengan ID Formspree kamu.<br>
+                Daftar gratis di <a href="https://formspree.io" target="_blank">formspree.io</a> → buat form baru → copy endpoint.
+            </p>
         </div>
 
         <div class="guestbook-list" id="guestbookList">
-            <!-- Messages will appear here -->
+            <p style="text-align:center; color:var(--soft-gray); font-size:0.9rem;">Ucapan dari tamu akan muncul di sini setelah dihubungkan ke Formspree.</p>
         </div>
     </section>
 
@@ -949,8 +953,12 @@
         <div class="divider"></div>
         <p class="section-subtitle">Scan untuk membuka undangan ini di HP</p>
         <div style="text-align:center; margin-top:2rem;">
-            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://fajartris17.github.io/wedding-fajar-aji/" alt="QR Code Undangan" style="border:8px solid white; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
-            <p style="margin-top:1rem; font-size:0.9rem; color:var(--soft-gray);">https://fajartris17.github.io/wedding-fajar-aji/</p>
+            <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://tinyurl.com/fajar-aji-wedding" alt="QR Code Undangan" style="border:8px solid white; border-radius:12px; box-shadow:0 8px 30px rgba(0,0,0,0.1);">
+            <p style="margin-top:1rem; font-size:0.9rem; color:var(--soft-gray);">
+                <strong>Link Pendek:</strong><br>
+                <a href="https://tinyurl.com/fajar-aji-wedding" target="_blank" style="color:var(--gold-dark);">https://tinyurl.com/fajar-aji-wedding</a>
+            </p>
+            <p style="margin-top:0.5rem; font-size:0.8rem; color:var(--soft-gray);">Link asli: https://fajartris17.github.io/wedding-fajar-aji/</p>
         </div>
     </section>
 
