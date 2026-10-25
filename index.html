@@ -729,9 +729,9 @@
             <span class="ampersand">&</span>
             <h1>Aji</h1>
             <div class="date-place">
-                <!-- GANTI TANGGAL & TEMPAT -->
-                Sabtu, 20 Desember 2026<br>
-                Balikpapan, Kalimantan Timur
+                Kamis, 29 Oktober 2026<br>
+                Malam, setelah Sholat Isya<br>
+                Jl. Lambung Mangkurat No. 1
             </div>
         </div>
         <div class="scroll-indicator"><i class="fas fa-chevron-down"></i></div>
@@ -755,13 +755,13 @@
             <div class="couple-card">
                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="Fajar" class="couple-photo">
                 <h3>Fajar Tri Suhartono</h3>
-                <p class="parents">Putra dari<br>Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+                <p class="parents">Putra dari<br>Bapak Sukarno & Ibu Mujiati</p>
             </div>
             <div class="heart-divider"><i class="fas fa-heart"></i></div>
             <div class="couple-card">
                 <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=400&q=80" alt="Aji" class="couple-photo">
                 <h3>Aji Febriyanti</h3>
-                <p class="parents">Putri dari<br>Bapak [Nama Ayah] & Ibu [Nama Ibu]</p>
+                <p class="parents">Putri dari<br>Bapak Rudy & Ibu Ramaniah</p>
             </div>
         </div>
     </section>
@@ -788,28 +788,25 @@
             <div class="event-card">
                 <div class="event-icon"><i class="fas fa-mosque"></i></div>
                 <h3>Akad Nikah</h3>
-                <p class="time">Sabtu, 20 Desember 2026<br>Pukul 08.00 WITA</p>
+                <p class="time">Kamis, 29 Oktober 2026<br>Setelah Sholat Isya (sekitar 19.30 WITA)</p>
                 <p class="address">
-                    <!-- GANTI ALAMAT LENGKAP -->
-                    Kediaman Mempelai Wanita<br>
-                    Jl. [Nama Jalan] No. XX, RT XX / RW XX<br>
-                    Kel. [Kelurahan], Kec. [Kecamatan]<br>
+                    Kediaman<br>
+                    Jl. Lambung Mangkurat No. 1<br>
                     Balikpapan, Kalimantan Timur
                 </p>
-                <a href="https://maps.google.com/?q=Balikpapan" target="_blank" class="map-btn">Lihat Maps</a>
+                <a href="https://maps.google.com/?q=Jl.+Lambung+Mangkurat+No.+1+Balikpapan" target="_blank" class="map-btn">Lihat Maps</a>
                 <a href="#" class="map-btn" style="background:transparent; border:1px solid var(--gold); color:var(--gold); margin-left:0.5rem;" onclick="addToCalendar('akad'); return false;">+ Kalender</a>
             </div>
             <div class="event-card">
                 <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
                 <h3>Resepsi</h3>
-                <p class="time">Sabtu, 20 Desember 2026<br>Pukul 11.00 WITA - Selesai</p>
+                <p class="time">Kamis, 29 Oktober 2026<br>Setelah Sholat Isya (sekitar 19.30 WITA) - Selesai</p>
                 <p class="address">
-                    <!-- GANTI ALAMAT LENGKAP -->
-                    [Nama Gedung / Lokasi]<br>
-                    Jl. [Nama Jalan] No. XX<br>
+                    Kediaman<br>
+                    Jl. Lambung Mangkurat No. 1<br>
                     Balikpapan, Kalimantan Timur
                 </p>
-                <a href="https://maps.google.com/?q=Balikpapan" target="_blank" class="map-btn">Lihat Maps</a>
+                <a href="https://maps.google.com/?q=Jl.+Lambung+Mangkurat+No.+1+Balikpapan" target="_blank" class="map-btn">Lihat Maps</a>
                 <a href="#" class="map-btn" style="background:transparent; border:1px solid var(--gold); color:var(--gold); margin-left:0.5rem;" onclick="addToCalendar('resepsi'); return false;">+ Kalender</a>
             </div>
         </div>
@@ -986,7 +983,7 @@
         }
 
         // Countdown - GANTI TANGGAL DI SINI
-        const weddingDate = new Date('2026-12-20T08:00:00+08:00'); // WITA
+        const weddingDate = new Date('2026-10-29T19:30:00+08:00'); // 29 Okt 2026, setelah Isya WITA
 
         function updateCountdown() {
             const now = new Date();
@@ -1014,8 +1011,8 @@
         // Add to Calendar
         function addToCalendar(type) {
             const title = type === 'akad' ? 'Akad Nikah Fajar & Aji' : 'Resepsi Pernikahan Fajar & Aji';
-            const start = type === 'akad' ? '20261220T080000' : '20261220T110000';
-            const end = type === 'akad' ? '20261220T100000' : '20261220T140000';
+            const start = '20261029T193000';
+            const end = '20261029T220000';
             const details = 'Undangan Pernikahan Fajar Tri Suhartono & Aji Febriyanti';
             const location = 'Balikpapan, Kalimantan Timur';
             const url = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(title)}&dates=${start}/${end}&details=${encodeURIComponent(details)}&location=${encodeURIComponent(location)}`;
