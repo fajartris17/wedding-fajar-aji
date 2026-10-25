@@ -964,6 +964,7 @@
             <a href="https://www.facebook.com/sharer/sharer.php?u=https://fajartris17.github.io/wedding-fajar-aji/" target="_blank" title="Share Facebook"><i class="fab fa-facebook"></i></a>
         </div>
         <p style="font-size:0.85rem; margin-top:1rem;">© 2026 Fajar Tri Suhartono & Aji Febriyanti</p>
+        <button onclick="backToCover()" style="margin-top:1.5rem; background:transparent; border:1px solid var(--gold); color:var(--gold); padding:10px 24px; border-radius:50px; cursor:pointer; font-size:0.85rem;">Kembali ke Cover</button>
     </footer>
 
     <!-- Music Button -->
@@ -988,6 +989,12 @@
             document.getElementById('navbar').classList.add('visible');
             // Optional: start music
             // toggleMusic();
+        }
+
+        function backToCover() {
+            document.getElementById('opening').classList.remove('hidden');
+            document.getElementById('navbar').classList.remove('visible');
+            window.scrollTo(0, 0);
         }
 
         // Mobile menu
