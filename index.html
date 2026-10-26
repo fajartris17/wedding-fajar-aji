@@ -89,6 +89,24 @@
         .gallery-item:hover img { transform: scale(1.08); }
         .gallery-note { text-align: center; font-size: 0.85rem; color: var(--soft-gray); margin-top: 1.5rem; font-style: italic; }
 
+        .gallery-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: rgba(184, 151, 106, 0.9);
+            color: #1a1614;
+            font-weight: 600;
+            font-size: 0.9rem;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
+
         .lightbox { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.92); z-index: 2000; align-items: center; justify-content: center; padding: 1rem; }
         .lightbox.active { display: flex; }
         .lightbox img { max-width: 90%; max-height: 85vh; border-radius: 8px; }
@@ -203,15 +221,8 @@
                 <div class="event-icon"><i class="fas fa-ring"></i></div>
                 <h3>Akad Nikah</h3>
                 <p class="time">19.30 WIB</p>
-                <p class="address">Hotel Mercure Samarinda<br>Jl. Mulawarman No.171, Pelabuhan, Kec. Samarinda Kota, Kota Samarinda, Kalimantan Timur 75112</p>
-                <a href="https://maps.google.com/?q=Hotel+Mercure+Samarinda+Jl.+Mulawarman+No.171" class="map-btn" target="_blank">Lihat Maps</a>
-            </div>
-            <div class="event-card">
-                <div class="event-icon"><i class="fas fa-glass-cheers"></i></div>
-                <h3>Resepsi</h3>
-                <p class="time">19.30 – 22.00 WIB</p>
-                <p class="address">Hotel Mercure Samarinda<br>Jl. Mulawarman No.171, Pelabuhan, Kec. Samarinda Kota, Kota Samarinda, Kalimantan Timur 75112</p>
-                <a href="https://maps.google.com/?q=Hotel+Mercure+Samarinda+Jl.+Mulawarman+No.171" class="map-btn" target="_blank">Lihat Maps</a>
+                <p class="address">Kediaman Wanita<br>Jl. Lambung Mangkurat No. 1, Samarinda Ilir, Kel. Pelita</p>
+                <a href="https://maps.google.com/?q=Jl.+Lambung+Mangkurat+No.+1+Samarinda+Ilir+Kel.+Pelita" class="map-btn" target="_blank">Lihat Maps</a>
             </div>
         </div>
     </section>
@@ -221,12 +232,12 @@
         <div class="divider"></div>
         <p class="section-subtitle">Momen indah kami</p>
         <div class="gallery-grid">
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-1.jpg" alt="Prewed 1"></div>
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-2.jpg" alt="Prewed 2"></div>
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-3.jpg" alt="Prewed 3"></div>
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-4.jpg" alt="Prewed 4"></div>
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-5.jpg" alt="Prewed 5"></div>
-            <div class="gallery-item" onclick="openLightbox(this)"><img src="images/prewed-6.jpg" alt="Prewed 6"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">1</span><img src="images/prewed-1.jpg" alt="Prewed 1"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">2</span><img src="images/prewed-2.jpg" alt="Prewed 2"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">3</span><img src="images/prewed-3.jpg" alt="Prewed 3"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">4</span><img src="images/prewed-4.jpg" alt="Prewed 4"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">5</span><img src="images/prewed-5.jpg" alt="Prewed 5"></div>
+            <div class="gallery-item" onclick="openLightbox(this)"><span class="gallery-number">6</span><img src="images/prewed-6.jpg" alt="Prewed 6"></div>
         </div>
         <p class="gallery-note">Klik foto untuk melihat lebih besar</p>
     </section>
